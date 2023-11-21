@@ -33,8 +33,8 @@ export default function NewProject({ addProject }) {
   return (
     <>
       <Modal ref={modal} buttonCaption="Okay">
-        <h2>Invalid Input</h2>
-        <p>Check input and try again</p>
+        <h2 className="text-xl font-bold text-stone-700 my-4">Invalid Input</h2>
+        <p className="text-stone-600 mb-4">Check input and try again</p>
       </Modal>
       <div className="w-[35rem] mt-16">
         <menu className="flex items-center justify-end gap-4 my-4">
