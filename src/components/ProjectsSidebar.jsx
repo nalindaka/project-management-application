@@ -19,10 +19,16 @@ export default function ProjectsSidebar({
           let cssClasses =
             "w-full text-left px-2 py-1 rounded-sm my-1 hover:text-stone-200 hover:bg-stone-800";
 
+          console.log(
+            "project.id",
+            project.id,
+            "selectedProjectId",
+            selectedProjectId
+          );
           if (project.id === selectedProjectId) {
             cssClasses += " bg-stone-800 text-stone-200";
           } else {
-            cssClasses += " bg-stone-400";
+            cssClasses += " text-stone-400";
           }
 
           return (
