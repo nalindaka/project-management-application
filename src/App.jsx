@@ -20,7 +20,7 @@ function App() {
       };
       return {
         ...prevState,
-        tasks: [...prevState.tasks, newTask],
+        tasks: [newTask, ...prevState.tasks],
       };
     });
   }
