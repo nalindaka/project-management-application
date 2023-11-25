@@ -25,7 +25,12 @@ function App() {
     });
   }
 
-  function handleDeleteTask() {}
+  function handleDeleteTask(id) {
+    setProjectsState((prevState) => ({
+      ...prevState,
+      tasks: prevState.projects.filter((task) => task.id !== id),
+    }));
+  }
 
   function handleSelectProject(id) {
     setProjectsState((prevState) => ({
@@ -78,6 +83,7 @@ function App() {
       onAddTask={handleAddTask}
       onDeleteTask={handleDeleteTask}
       tasks={projectsState.tasks}
+      selectedProjectId={projectsState.selectedProjectId}
     />
   );
 
